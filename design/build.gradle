@@ -1,0 +1,9 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+dependencies {
+    implementation Deps.buffer_components
+    implementation Deps.kotlin
+    api Deps.material
+}

@@ -1,0 +1,6 @@
+include ':app'
+include ':cache'
+include ':core'
+include ':data'
+include ':design'
+rootProject.name='BufferTakeHome'

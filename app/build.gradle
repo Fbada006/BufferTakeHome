@@ -1,0 +1,10 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+dependencies {
+    implementation project(":design")
+    implementation Deps.kotlin
+    implementation Deps.material
+    implementation Deps.appcompat
+}

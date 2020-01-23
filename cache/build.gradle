@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation project(":data")
+    implementation Deps.kotlin
+    implementation Deps.room_runtime
+    implementation Deps.javax_inject
+    kapt Deps.room_compiler
+
+    testImplementation Deps.junit
+    testImplementation Deps.mockito_kotlin
+    testImplementation Deps.arch_testing
+    testImplementation Deps.room_testing
+}
