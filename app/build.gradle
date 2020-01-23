@@ -1,10 +1,17 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 dependencies {
+    implementation project(":cache")
+    implementation project(":core")
     implementation project(":design")
+
+    implementation Deps.appcompat
+    implementation Deps.dagger
     implementation Deps.kotlin
     implementation Deps.material
-    implementation Deps.appcompat
+
+    kapt Deps.dagger_compiler
 }

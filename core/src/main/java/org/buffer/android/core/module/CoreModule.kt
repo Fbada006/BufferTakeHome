@@ -11,7 +11,5 @@ open class CoreModule {
 
     @Provides
     @Singleton
-    internal fun providePublishDatabase(context: Context): PublishDatabase {
-        return PublishDatabase.getInstance(context)
-    }
+    internal fun providePublishDatabase(context: Context) = PublishDatabase.getInstance(context)
 }

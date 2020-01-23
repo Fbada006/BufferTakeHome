@@ -5,8 +5,10 @@ apply plugin: 'kotlin-kapt'
 dependencies {
     implementation project(":cache")
 
+    implementation Deps.appcompat
     implementation Deps.kotlin
     implementation Deps.dagger
+
     kapt Deps.dagger_compiler
     kapt Deps.dagger_processor
 }

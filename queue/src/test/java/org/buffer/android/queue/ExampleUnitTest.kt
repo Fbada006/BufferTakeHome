@@ -1,4 +1,4 @@
-package org.buffer.android.takehome
+package org.buffer.android.queue
 
 import org.junit.Test
 

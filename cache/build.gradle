@@ -5,7 +5,7 @@ apply plugin: 'kotlin-kapt'
 dependencies {
     implementation project(":data")
     implementation Deps.kotlin
-    implementation Deps.room_runtime
+    api Deps.room_runtime
     implementation Deps.javax_inject
     kapt Deps.room_compiler
 
