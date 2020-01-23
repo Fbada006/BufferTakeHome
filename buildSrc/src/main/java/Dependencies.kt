@@ -79,21 +79,12 @@ object Deps {
     val room_rx_java = "androidx.room:room-rxjava2:${Versions.room_android_x}"
     val room_ktx = "androidx.room:room-ktx:${Versions.room_android_x}"
 
-    val navigation_fragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationComponent}"
-    val navigation_ui = "androidx.navigation:navigation-ui-ktx:${Versions.navigationComponent}"
-
     val dagger = "com.google.dagger:dagger:${Versions.dagger}"
     val dagger_compiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
     val dagger_support = "com.google.dagger:dagger-android-support:${Versions.dagger}"
     val dagger_processor = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
 
     val android_annotations = "androidx.annotation:annotation:${Versions.androidAnnotations}"
-    val ok_http = "com.squareup.okhttp3:okhttp:${Versions.okHttp}"
-    val ok_http_logger = "com.squareup.okhttp3:logging-interceptor:${Versions.okHttp}"
-    val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-    val retrofit_converter = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
-    val retrofit_xml = "com.squareup.retrofit2:converter-simplexml:${Versions.retrofit}"
-    val retrofit_adapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
 
     val junit = "junit:junit:${Versions.jUnit}"
     val junit_androidx = "androidx.test.ext:junit:${Versions.jUnitAndroidX}"
@@ -109,7 +100,6 @@ object Deps {
     val robolectric = "org.robolectric:robolectric:${Versions.robolectric}"
     val room_testing = "androidx.room:room-testing:${Versions.room_android_x}"
     val arch_testing = "androidx.arch.core:core-testing:${Versions.arch_testing}"
-    val work_manager_testing = "androidx.work:work-testing:${Versions.workManagerTesting}"
 
     val support_runner = "androidx.test:runner:${Versions.androidSupportRunner}"
     val support_rules = "androidx.test:rules:${Versions.androidSupportRules}"

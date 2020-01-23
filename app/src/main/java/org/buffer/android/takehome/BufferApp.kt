@@ -1,9 +1,11 @@
 package org.buffer.android.takehome
 
 import android.app.Application
+import org.buffer.android.cache.PublishDatabase
 import org.buffer.android.core.CoreComponent
 import org.buffer.android.core.DaggerCoreComponent
 import org.buffer.android.core.di.CoreComponentProvider
+import javax.inject.Inject
 
 class BufferApp: Application(), CoreComponentProvider {
 
