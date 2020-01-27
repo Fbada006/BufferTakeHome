@@ -1,6 +1,6 @@
 package org.buffer.android.core.di
 
-import org.buffer.android.core.CoreComponent
+import org.buffer.android.core.di.component.CoreComponent
 
 /**
  * Provides the core Dagger DI Component.

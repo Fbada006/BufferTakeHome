@@ -81,7 +81,6 @@ object Deps {
 
     val dagger = "com.google.dagger:dagger:${Versions.dagger}"
     val dagger_compiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
-    val dagger_support = "com.google.dagger:dagger-android-support:${Versions.dagger}"
     val dagger_processor = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
 
     val android_annotations = "androidx.annotation:annotation:${Versions.androidAnnotations}"

@@ -2,6 +2,8 @@
 
 Welcome to the Android takehome task repository, thank you for taking your time to be here!
 
+## Task 1: Technical task
+
 We've been given the following design, which is for the Queue within a Buffer account:
 
 ![Queue design screenshot](https://github.com/bufferapp/Android-Takehome/art/queue_design.png)
@@ -12,4 +14,8 @@ The project contains a database which holds the three updates (these will be ini
 
 Since creating the database, our designer added the ability to support an imageUrl on an update - so you'll need to update the database to reflect this change. This imageUrl is nullable, so for the sake of the design you only need to provide it on one of the updates. You can use any imageUrl that you'd like for the sample data :)
 
-The buildSrc module of the project contains a collection of preferred dependencies copied over from our other apps. You can use dependencies outside of these if they feel necessary - but sticking with these helps to keep things consistant across out projects (for example RxJava for async work).
+The buildSrc module of the project contains a collection of preferred dependencies copied over from our other apps. You can use dependencies outside of these if they feel necessary - but sticking with these helps to keep things consistant across out projects (for example, it would be great to see the use of RxJava for async work, Dagger for Dependency Injection and View Models from the architecture components library). Dagger is also already configured in the Core module, meaning that for however you handle the Queue area, you'll be able to inject components for that screen.
+
+## Task 2: Pull request review
+
+You'll notice that in this repository there is an open pull request (PR) from a feature implementation. This PR needs to be reviewed before we merge it in - so as the second part of this interview stage you'll need to review the code in this PR.

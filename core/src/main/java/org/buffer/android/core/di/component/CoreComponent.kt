@@ -1,12 +1,12 @@
-package org.buffer.android.core
+package org.buffer.android.core.di.component
 
 import android.app.Application
 import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
 import org.buffer.android.cache.PublishDatabase
-import org.buffer.android.core.module.ContextModule
-import org.buffer.android.core.module.CoreModule
+import org.buffer.android.core.di.module.ContextModule
+import org.buffer.android.core.di.module.CoreModule
 import javax.inject.Singleton
 
 @Singleton
