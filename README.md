@@ -8,7 +8,7 @@ We've been given the following design, which is for the Queue within a Buffer ac
 
 ![Queue design screenshot](https://github.com/bufferapp/Android-Takehome/blob/master/art/queue_design.png)
 
-Your task is to implement this design and in-order to do this you'll need to retrieve the data for the updates, which is stored in a local database. This repository contains the foundations of the project which should be enough to get started. 
+Your task is to implement this design and in-order to do this you'll need to retrieve the data for the updates, which is stored in a local database. This repository contains the foundations of the project which should be enough to get started.
 
 The project contains a database which holds the three updates (these will be initiated when the first read is made on the database). Each of these updates contains an ID (the primary key), update content in the form of text and the time that the update is scheduled to go out at.
 
