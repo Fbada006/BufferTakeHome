@@ -6,7 +6,7 @@ Welcome to the Android takehome task repository, thank you for taking your time 
 
 We've been given the following design, which is for the Queue within a Buffer account:
 
-![Queue design screenshot](https://github.com/bufferapp/***REMOVED***/blob/master/art/queue_design.png)
+![Queue design screenshot](https://github.com/bufferapp/Android-Takehome-/blob/master/art/queue_design.png)
 
 Your task is to implement this design and in-order to do this you'll need to retrieve the data for the updates, which is stored in a local database. This repository contains the foundations of the project which should be enough to get started.
 
