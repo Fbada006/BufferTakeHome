@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 2,
-    "identityHash": "b68f39527819f0a594274f160e3f3edb",
+    "identityHash": "3067207fe8ff32e9493f294ab00cdfc8",
     "entities": [
       {
         "tableName": "updates",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`update_id` TEXT NOT NULL, `text` TEXT, `due_at` INTEGER NOT NULL, PRIMARY KEY(`update_id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`update_id` TEXT NOT NULL, `text` TEXT, `due_at` INTEGER NOT NULL, `image_url` TEXT, PRIMARY KEY(`update_id`))",
         "fields": [
           {
             "fieldPath": "id",
@@ -25,6 +25,12 @@
             "columnName": "due_at",
             "affinity": "INTEGER",
             "notNull": true
+          },
+          {
+            "fieldPath": "imageUrl",
+            "columnName": "image_url",
+            "affinity": "TEXT",
+            "notNull": false
           }
         ],
         "primaryKey": {
@@ -40,7 +46,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b68f39527819f0a594274f160e3f3edb')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '3067207fe8ff32e9493f294ab00cdfc8')"
     ]
   }
 }

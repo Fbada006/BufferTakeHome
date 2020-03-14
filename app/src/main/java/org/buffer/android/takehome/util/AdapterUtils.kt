@@ -1,6 +1,7 @@
 package org.buffer.android.takehome.util
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.view.View
 import android.widget.ImageView
 import com.bumptech.glide.Glide
@@ -24,22 +25,23 @@ fun formatTimeFromDb(milliseconds: Long): String {
     return timeString.replace("AM", "am").replace("PM", "pm");
 }
 
-///**
-// * Set the visibility of the ImageView in the update_item.xml depending on whether the
-// * Update has the imageUrl or not. If it has a URL, load it with Glide
-// *
-// * @param update is the [Update]
-// *
-// */
-//fun setUpdateImage(update: Update, updateView: ImageView) {
-//    val hasImageUrl = update.imageUrl != null
-//    when {
-//        hasImageUrl -> {
-//            updateView.visibility = View.VISIBLE
-//            Glide.with(updateView.context)
-//        }
-//        else -> {
-//            updateView.visibility = View.INVISIBLE
-//        }
-//    }
-//}
+/**
+ * Set the visibility of the ImageView in the update_item.xml depending on whether the
+ * Update has the imageUrl or not. If it has a URL, load it with Glide
+ *
+ * @param update is the [Update]
+ *
+ */
+fun setUpdateImage(update: Update, updateImageView: ImageView) {
+    val context = updateImageView.context
+    if (update.imageUrl != null) {
+        updateImageView.visibility = View.VISIBLE
+        Glide.with(context)
+            .load(getImageFromUpdate(context, update.imageUrl!!))
+            .into(updateImageView)
+    }
+}
+
+/**Helper method for getting the name of the drawable*/
+private fun getImageFromUpdate(context: Context, imageUrl: String): Int =
+    context.resources.getIdentifier(imageUrl, "drawable", context.packageName)

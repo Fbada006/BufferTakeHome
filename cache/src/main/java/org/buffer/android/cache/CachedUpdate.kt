@@ -15,7 +15,7 @@ class CachedUpdate(
     var id: String = "",
     val text: String? = null,
     @ColumnInfo(name = COLUMN_NAME_DUE_AT)
-    var dueAt: Long = 0
-//    @ColumnInfo(name = COLUMN_NAME_IMAGE_URL)
-//    var imageUrl: String ? = null
+    var dueAt: Long = 0,
+    @ColumnInfo(name = COLUMN_NAME_IMAGE_URL)
+    var imageUrl: String? = null
 )

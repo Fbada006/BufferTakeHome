@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.update_item.view.*
 import org.buffer.android.data.Update
 import org.buffer.android.takehome.R
 import org.buffer.android.takehome.util.formatTimeFromDb
+import org.buffer.android.takehome.util.setUpdateImage
 
 class UpdateAdapter : ListAdapter<Update, UpdateAdapter.UpdateViewHolder>(UpdateDiffCallback()) {
 
@@ -29,7 +30,7 @@ class UpdateAdapter : ListAdapter<Update, UpdateAdapter.UpdateViewHolder>(Update
             //Set the text
             itemView.tV_update_text.text = item.text
             //Set the visibility of the image view depending on whether it has an image
-            //setUpdateImage(item, itemView.iv_update_image)
+            setUpdateImage(item, itemView.iv_update_image)
         }
 
         companion object {
