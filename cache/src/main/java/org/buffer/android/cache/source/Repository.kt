@@ -23,10 +23,6 @@ class Repository @Inject constructor(private val cachedUpdateDao: CachedUpdateDa
             .flatMapSingle { cachedUpdatesList ->
                 Observable.fromIterable(cachedUpdatesList)
                     .map { cachedUpdate ->
-                        Log.e(TAG, "Id of the update =======:${cachedUpdate.id} " )
-                        Log.e(TAG, "Text of the update =======:${cachedUpdate.text} " )
-                        Log.e(TAG, "Date of the update =======:${cachedUpdate.dueAt} " )
-                        Log.e(TAG, "Image of the update =======:${cachedUpdate.imageUrl} " )
                         mapper.mapFromCache(cachedUpdate) }.toList()
             }
             .onErrorReturn {

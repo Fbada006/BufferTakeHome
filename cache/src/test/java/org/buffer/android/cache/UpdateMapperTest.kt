@@ -17,6 +17,6 @@ class UpdateMapperTest {
         assertEquals(cachedUpdate.id, update.id)
         assertEquals(cachedUpdate.text, update.text)
         assertEquals(cachedUpdate.dueAt, update.dueAt)
-        //assertEquals(cachedUpdate.imageUrl, update.imageUrl)
+        assertEquals(cachedUpdate.imageUrl, update.imageUrl)
     }
 }
