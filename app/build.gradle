@@ -7,11 +7,19 @@ dependencies {
     implementation project(":cache")
     implementation project(":core")
     implementation project(":design")
+    implementation project(":data")
 
     implementation Deps.appcompat
+    implementation Deps.activity_ktx
     implementation Deps.dagger
     implementation Deps.kotlin
     implementation Deps.material
+    implementation Deps.recyclerview
+    implementation Deps.constraint_layout
+    implementation Deps.rx_kotlin
+    implementation Deps.rx_java
+    implementation Deps.rx_java
+    implementation Deps.glide
 
     kapt Deps.dagger_compiler
 }

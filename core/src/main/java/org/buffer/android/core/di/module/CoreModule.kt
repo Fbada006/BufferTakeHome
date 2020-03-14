@@ -12,4 +12,8 @@ open class CoreModule {
     @Provides
     @Singleton
     internal fun providePublishDatabase(context: Context) = PublishDatabase.getInstance(context)
+
+    @Provides
+    @Singleton
+    internal fun provideCachedDao(database: PublishDatabase) = database.cachedUpdateDao
 }

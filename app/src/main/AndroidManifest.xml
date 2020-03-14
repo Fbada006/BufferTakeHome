@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/PublishTheme.DayNight">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Publish.NoActionBar">
             <intent-filter>

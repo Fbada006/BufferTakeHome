@@ -6,4 +6,7 @@ dependencies {
     implementation Deps.appcompat
     implementation Deps.kotlin
     implementation Deps.material
+
+    testImplementation Deps.junit
+    androidTestImplementation Deps.junit_androidx
 }

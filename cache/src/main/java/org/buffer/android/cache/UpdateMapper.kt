@@ -6,5 +6,5 @@ class UpdateMapper {
 
     fun mapFromCache(
         cachedUpdate: CachedUpdate
-    ) =  Update(cachedUpdate.id, cachedUpdate.id, cachedUpdate.dueAt)
+    ) =  Update(cachedUpdate.id, cachedUpdate.text, cachedUpdate.dueAt)
 }

@@ -2,7 +2,7 @@ object Versions {
     val minSdk = 21
     val targetSdk = 29
     val compileSdk = 29
-    val kotlin = "1.3.61"
+    val kotlin = "1.3.70"
     val dagger = "2.25.2"
     val rxKotlin = "2.4.0"
     val rxJava = "2.2.14"
@@ -18,7 +18,7 @@ object Versions {
     val okHttp = "4.2.2"
     val androidAnnotations = "1.1.0"
     val recyclerView = "1.1.0"
-    val androidx = "1.1.0-rc01"
+    val androidx = "1.1.0"
     val drawerLayout = "1.1.0-alpha03"
     val retrofit = "2.6.2"
     val timber = "4.7.1"
@@ -45,19 +45,21 @@ object Versions {
     val espressoSupport = "1.0.0"
     val biscotti = "cc34682799"
     val uiAutomator = "2.1.3"
+    val lifecyleVersion = "2.2.0"
 }
 
 object Deps {
     val recyclerview = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
     val appcompat = "androidx.appcompat:appcompat:${Versions.androidx}"
     val drawer_layout = "androidx.drawerlayout:drawerlayout:${Versions.drawerLayout}"
-    val constraint_layout = "com.android.support.constraint:constraint-layout:${Versions.constraintLayout}"
+    val constraint_layout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     val material = "com.google.android.material:material:${Versions.material}"
     val buffer_components = "org.buffer.android:android-components:${Versions.bufferComponents}"
     val buffer_android_utils = "org.buffer.android:android-utils:${Versions.bufferAndroidUtils}"
     val counter_view = "com.github.bufferapp:CounterView:${Versions.counterView}"
     val view_pager = "androidx.viewpager:viewpager:${Versions.viewPager}"
     val activity_ktx = "androidx.activity:activity-ktx:${Versions.androidx}"
+    val life_cycle_extensions = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecyleVersion}"
 
     val javax_annotation = "javax.annotation:jsr250-api:${Versions.javaxAnnotation}"
     val javax_inject = "javax.inject:javax.inject:${Versions.javaxInject}"
@@ -65,6 +67,7 @@ object Deps {
     val rx_kotlin = "io.reactivex.rxjava2:rxkotlin:${Versions.rxKotlin}"
     val rx_java = "io.reactivex.rxjava2:rxjava:${Versions.rxJava}"
     val rx_android = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
+    val reactive_streams = "androidx.lifecycle:lifecycle-reactivestreams-ktx:${Versions.lifecyleVersion}"
 
     val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
     val gson = "com.google.code.gson:gson:${Versions.gson}"

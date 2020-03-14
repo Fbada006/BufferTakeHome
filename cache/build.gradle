@@ -20,11 +20,18 @@ dependencies {
     implementation project(":data")
     implementation Deps.kotlin
     api Deps.room_runtime
+    implementation Deps.room_ktx
+    implementation Deps.rx_java
+    implementation Deps.rx_kotlin
+    implementation Deps.rx_android
+    implementation Deps.room_rx_java
     implementation Deps.javax_inject
+    implementation Deps.reactive_streams
     kapt Deps.room_compiler
 
     testImplementation Deps.junit
     testImplementation Deps.mockito_kotlin
     testImplementation Deps.arch_testing
     testImplementation Deps.room_testing
+    androidTestImplementation Deps.junit_androidx
 }
