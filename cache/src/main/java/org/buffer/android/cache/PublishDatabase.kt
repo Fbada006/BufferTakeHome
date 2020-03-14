@@ -7,8 +7,11 @@ import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import javax.inject.Inject
 
-@Database(entities = [CachedUpdate::class], version = 1)
+//Since it is an update, the version needs to be increased as well
+@Database(entities = [CachedUpdate::class], version = 2)
 abstract class PublishDatabase @Inject constructor() : RoomDatabase() {
+
+    abstract val cachedUpdateDao: CachedUpdateDao
 
     companion object {
         private val sLock = Any()
@@ -19,8 +22,10 @@ abstract class PublishDatabase @Inject constructor() : RoomDatabase() {
             if (INSTANCE == null) {
                 synchronized(sLock) {
                     if (INSTANCE == null) {
-                        INSTANCE = Room.databaseBuilder(context.applicationContext,
-                            PublishDatabase::class.java, "buffer_publish.db")
+                        INSTANCE = Room.databaseBuilder(
+                                context.applicationContext,
+                                PublishDatabase::class.java, "buffer_publish.db"
+                            )
                             .allowMainThreadQueries()
                             .addCallback(object : RoomDatabase.Callback() {
                                 override fun onCreate(db: SupportSQLiteDatabase) {
