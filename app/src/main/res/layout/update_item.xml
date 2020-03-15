@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
-    android:background="@color/color_background"
-    android:elevation="16dp">
+    android:layout_margin="@dimen/update_item_outer_margin"
+    android:layout_marginTop="@dimen/update_item_margin"
+    android:layout_marginBottom="@dimen/update_item_margin"
+    android:background="@color/backGround"
+    android:elevation="@dimen/update_item_elevation">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:id="@+id/tv_update_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
+            android:padding="@dimen/update_item_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -28,10 +28,10 @@
         <ImageView
             android:id="@+id/iv_update_image"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="@dimen/update_item_image_height"
             android:contentDescription="@string/image_of_the_update"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
+            android:paddingTop="@dimen/update_item_margin"
+            android:paddingBottom="@dimen/update_item_margin"
             android:scaleType="centerCrop"
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,7 @@
             android:id="@+id/tV_update_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
+            android:padding="@dimen/update_item_margin"
             android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

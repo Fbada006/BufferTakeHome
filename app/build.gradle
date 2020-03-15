@@ -8,6 +8,7 @@ dependencies {
     implementation project(":core")
     implementation project(":design")
     implementation project(":data")
+    implementation project(":queue")
 
     implementation Deps.appcompat
     implementation Deps.activity_ktx

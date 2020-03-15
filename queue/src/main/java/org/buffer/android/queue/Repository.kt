@@ -1,6 +1,5 @@
-package org.buffer.android.cache.source
+package org.buffer.android.queue
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.LiveDataReactiveStreams
 import io.reactivex.Observable
@@ -12,7 +11,7 @@ import javax.inject.Inject
 
 /**The source of data for the app*/
 class Repository @Inject constructor(private val cachedUpdateDao: CachedUpdateDao) {
-    val TAG = "Repository"
+
     /**Get the data and return a [LiveData] object to present to the ViewModel
      * The mapper maps each [CachedUpdate] to [Update] which is what is shown in the UI
      * */
@@ -23,7 +22,8 @@ class Repository @Inject constructor(private val cachedUpdateDao: CachedUpdateDa
             .flatMapSingle { cachedUpdatesList ->
                 Observable.fromIterable(cachedUpdatesList)
                     .map { cachedUpdate ->
-                        mapper.mapFromCache(cachedUpdate) }.toList()
+                        mapper.mapFromCache(cachedUpdate)
+                    }.toList()
             }
             .onErrorReturn {
                 emptyList()

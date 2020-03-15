@@ -3,9 +3,17 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 dependencies {
+    implementation project(":data")
+    implementation project(":cache")
     implementation Deps.appcompat
     implementation Deps.kotlin
     implementation Deps.material
+    implementation Deps.rx_java
+    implementation Deps.rx_kotlin
+    implementation Deps.rx_android
+    implementation Deps.room_rx_java
+    implementation Deps.javax_inject
+    implementation Deps.reactive_streams
 
     testImplementation Deps.junit
     androidTestImplementation Deps.junit_androidx

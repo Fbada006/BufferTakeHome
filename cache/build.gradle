@@ -26,7 +26,6 @@ dependencies {
     implementation Deps.rx_android
     implementation Deps.room_rx_java
     implementation Deps.javax_inject
-    implementation Deps.reactive_streams
     kapt Deps.room_compiler
 
     testImplementation Deps.junit

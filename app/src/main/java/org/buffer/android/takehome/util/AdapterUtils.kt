@@ -22,7 +22,7 @@ fun formatTimeFromDb(milliseconds: Long): String {
     val timeString = simpleFormatter.format(date)
     //Since we know the exact values in this example, we can just make the last two characters lowercase
     //to stay in line with the design
-    return timeString.replace("AM", "am").replace("PM", "pm");
+    return timeString.replace("AM", "am").replace("PM", "pm")
 }
 
 /**

@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
-import org.buffer.android.cache.source.UpdateViewModel
+import org.buffer.android.queue.UpdateViewModel
 import org.buffer.android.core.ViewModelKey
 
 /**Handles creation of [ViewModel]*/

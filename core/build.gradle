@@ -3,6 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 dependencies {
+    implementation project(":queue")
     implementation project(":cache")
 
     implementation Deps.appcompat

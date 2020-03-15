@@ -13,10 +13,14 @@ import org.buffer.android.takehome.R
 import org.buffer.android.takehome.util.formatTimeFromDb
 import org.buffer.android.takehome.util.setUpdateImage
 
-class UpdateAdapter : ListAdapter<Update, UpdateAdapter.UpdateViewHolder>(UpdateDiffCallback()) {
+class UpdateAdapter : ListAdapter<Update, UpdateAdapter.UpdateViewHolder>(
+    UpdateDiffCallback()
+) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UpdateViewHolder {
-        return UpdateViewHolder.from(parent)
+        return UpdateViewHolder.from(
+            parent
+        )
     }
 
     override fun onBindViewHolder(holder: UpdateViewHolder, position: Int) {
@@ -37,14 +41,16 @@ class UpdateAdapter : ListAdapter<Update, UpdateAdapter.UpdateViewHolder>(Update
             fun from(parent: ViewGroup): UpdateViewHolder {
                 val view =
                     LayoutInflater.from(parent.context).inflate(R.layout.update_item, parent, false)
-                return UpdateViewHolder(view)
+                return UpdateViewHolder(
+                    view
+                )
             }
         }
     }
 }
 
 @SuppressLint("DiffUtilEquals")
-class UpdateDiffCallback() : DiffUtil.ItemCallback<Update>() {
+class UpdateDiffCallback : DiffUtil.ItemCallback<Update>() {
     override fun areItemsTheSame(oldItem: Update, newItem: Update): Boolean {
         return oldItem.id == newItem.id
     }
