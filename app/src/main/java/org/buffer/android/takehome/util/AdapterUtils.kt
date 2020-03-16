@@ -32,13 +32,13 @@ fun formatTimeFromDb(milliseconds: Long): String {
  * @param update is the [Update]
  *
  */
-fun setUpdateImage(update: Update, updateImageView: ImageView) {
-    val context = updateImageView.context
+fun ImageView.setUpdateImage(update: Update) {
+    val context = this.context
     if (update.imageUrl != null) {
-        updateImageView.visibility = View.VISIBLE
+        this.visibility = View.VISIBLE
         Glide.with(context)
             .load(getImageFromUpdate(context, update.imageUrl!!))
-            .into(updateImageView)
+            .into(this)
     }
 }
 

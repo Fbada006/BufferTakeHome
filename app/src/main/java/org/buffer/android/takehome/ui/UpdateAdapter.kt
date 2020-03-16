@@ -34,7 +34,7 @@ class UpdateAdapter : ListAdapter<Update, UpdateAdapter.UpdateViewHolder>(
             //Set the text
             itemView.tV_update_text.text = item.text
             //Set the visibility of the image view depending on whether it has an image
-            setUpdateImage(item, itemView.iv_update_image)
+            itemView.iv_update_image.setUpdateImage(item)
         }
 
         companion object {
