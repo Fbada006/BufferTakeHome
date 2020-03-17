@@ -1,10 +1,8 @@
 package org.buffer.android.core.di.component
 
 import android.app.Application
-import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
-import org.buffer.android.cache.PublishDatabase
 import org.buffer.android.core.ViewModelFactory
 import org.buffer.android.core.ViewModelFactoryModule
 import org.buffer.android.core.di.module.ContextModule
@@ -30,7 +28,5 @@ interface CoreComponent {
         fun build(): CoreComponent
     }
 
-    fun context(): Context
-    fun publishDatabase(): PublishDatabase
     fun viewModelFactory(): ViewModelFactory
 }

@@ -9,6 +9,7 @@ dependencies {
     implementation Deps.appcompat
     implementation Deps.kotlin
     implementation Deps.dagger
+    implementation Deps.glide
 
     kapt Deps.dagger_compiler
     kapt Deps.dagger_processor
