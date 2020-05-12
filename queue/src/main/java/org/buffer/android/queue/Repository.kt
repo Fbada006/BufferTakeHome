@@ -32,5 +32,20 @@ class Repository @Inject constructor(private val cachedUpdateDao: CachedUpdateDa
             .to { flowableUpdates ->
                 LiveDataReactiveStreams.fromPublisher(flowableUpdates)
             }
+//
+//        val allUpdates = cachedUpdateDao.getAllUpdates()
+//        return allUpdates.switchMap { cachedUpdatesList ->
+//                Flowable.fromIterable(cachedUpdatesList)
+//                    .map { cachedUpdate ->
+//                        mapper.mapFromCache(cachedUpdate)
+//                    }
+//            }.toList()
+//            .onErrorReturn {
+//                emptyList<Update>()
+//            }
+//            .subscribeOn(Schedulers.io())
+//            .to { flowableUpdates ->
+//                LiveDataReactiveStreams.fromPublisher(flowableUpdates.toFlowable())
+//            }
     }
 }
